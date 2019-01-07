@@ -38,7 +38,7 @@ class FoodTruck: NSObject, MKAnnotation {
                     newTruck.id = truck["_id"] as! String
                     newTruck.name = truck["name"] as! String
                     newTruck.foodType = truck["foodType"] as! String
-                    newTruck.avgCost = truck["avgcost"] as! Double
+                    newTruck.avgCost = truck["avgCost"] as! Double
                     let geometry = truck["geometry"] as! Dictionary<String, AnyObject>
                     newTruck.geomType = geometry["type"] as! String
                     let coords = geometry["coordinates"] as! Dictionary<String, AnyObject>

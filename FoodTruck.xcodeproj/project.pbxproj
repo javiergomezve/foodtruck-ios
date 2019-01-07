@@ -10,6 +10,7 @@
 		E82B755921E2D5A9009915DF /* FoodTruckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B755821E2D5A9009915DF /* FoodTruckCell.swift */; };
 		E82B755C21E2DCD2009915DF /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B755A21E2DCD2009915DF /* LogInVC.swift */; };
 		E82B755D21E2DCD2009915DF /* LogInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82B755B21E2DCD2009915DF /* LogInVC.xib */; };
+		E82B755F21E2E694009915DF /* AddFoodTruckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82B755E21E2E694009915DF /* AddFoodTruckVC.swift */; };
 		E878D17921E10C8D00CA48BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E878D17821E10C8D00CA48BB /* AppDelegate.swift */; };
 		E878D17E21E10C8D00CA48BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E878D17C21E10C8D00CA48BB /* Main.storyboard */; };
 		E878D18021E10C8F00CA48BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E878D17F21E10C8F00CA48BB /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		E82B755821E2D5A9009915DF /* FoodTruckCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTruckCell.swift; sourceTree = "<group>"; };
 		E82B755A21E2DCD2009915DF /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		E82B755B21E2DCD2009915DF /* LogInVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInVC.xib; sourceTree = "<group>"; };
+		E82B755E21E2E694009915DF /* AddFoodTruckVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodTruckVC.swift; sourceTree = "<group>"; };
 		E878D17521E10C8D00CA48BB /* FoodTruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E878D17821E10C8D00CA48BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E878D17D21E10C8D00CA48BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				E878D17821E10C8D00CA48BB /* AppDelegate.swift */,
 				E878D18F21E111E300CA48BB /* MainVC.swift */,
 				E82B755A21E2DCD2009915DF /* LogInVC.swift */,
+				E82B755E21E2E694009915DF /* AddFoodTruckVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				E878D17921E10C8D00CA48BB /* AppDelegate.swift in Sources */,
 				E878D19021E111E300CA48BB /* MainVC.swift in Sources */,
+				E82B755F21E2E694009915DF /* AddFoodTruckVC.swift in Sources */,
 				E878D19221E1123500CA48BB /* FoodTruck.swift in Sources */,
 				E878D19421E114B700CA48BB /* FoodTruckReview.swift in Sources */,
 				E878D19621E1169800CA48BB /* DataService.swift in Sources */,

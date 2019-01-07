@@ -78,7 +78,7 @@ class DataService {
         let json: [String: Any] = [
             "name": name,
             "foodType": foodType,
-            "avgcost": avgcost,
+            "avgCost": avgcost,
             "geometry": [
                 "coordinates": [
                     "lat": latitude,
