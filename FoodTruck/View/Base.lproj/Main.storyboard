@@ -103,6 +103,7 @@
                                             <outlet property="avgCost" destination="IbK-5w-NQB" id="8ym-v2-zov"/>
                                             <outlet property="foodTypeLabel" destination="22G-Gr-Uiz" id="fgP-oz-tyf"/>
                                             <outlet property="nameLabel" destination="Qq6-gM-myL" id="oWs-gP-4kh"/>
+                                            <segue destination="MKf-aG-3gq" kind="show" identifier="showDetailsFoodTruckVC" id="i3A-Qj-2yM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -278,6 +279,113 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOP-lK-pUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1206" y="159"/>
+        </scene>
+        <!--Details Food TruckVC-->
+        <scene sceneID="kqc-EN-NSL">
+            <objects>
+                <viewController id="MKf-aG-3gq" customClass="DetailsFoodTruckVC" customModule="FoodTruck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="npB-9n-aOM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAJ-VX-7eF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Li-sg-UPx">
+                                        <rect key="frame" x="15" y="32" width="12" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="Niw-pz-uhd"/>
+                                            <constraint firstAttribute="height" constant="25" id="bma-wO-gOT"/>
+                                        </constraints>
+                                        <state key="normal" image="WhiteBackArrow"/>
+                                        <connections>
+                                            <action selector="backButtonTappedWithSender:" destination="MKf-aG-3gq" eventType="touchUpInside" id="uga-SE-51L"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FoodTruck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRE-jU-Jp0">
+                                        <rect key="frame" x="37" y="33" width="300" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.48627450979999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Pdz-Vx-Bjz"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Li-sg-UPx" secondAttribute="bottom" constant="8" id="epJ-rm-xmj"/>
+                                    <constraint firstItem="wRE-jU-Jp0" firstAttribute="centerX" secondItem="bAJ-VX-7eF" secondAttribute="centerX" id="meV-Yn-sDE"/>
+                                    <constraint firstAttribute="bottom" secondItem="wRE-jU-Jp0" secondAttribute="bottom" constant="8" id="pKB-wK-EUD"/>
+                                    <constraint firstAttribute="width" constant="375" id="zIC-KI-PFb"/>
+                                    <constraint firstItem="3Li-sg-UPx" firstAttribute="leading" secondItem="bAJ-VX-7eF" secondAttribute="leading" constant="15" id="zrA-W3-xhe"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hqs-zT-JU9">
+                                <rect key="frame" x="16" y="190" width="343" height="457"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="457" id="ah4-Sf-LJr"/>
+                                    <constraint firstAttribute="width" constant="343" id="fn5-Yb-6aM"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FoodType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-Ej-WA4">
+                                <rect key="frame" x="16" y="85" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="NRZ-LA-4Fn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AvgCost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEn-6u-fLm">
+                                <rect key="frame" x="16" y="121" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="q3k-vf-1Nt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THt-KP-o2m">
+                                <rect key="frame" x="16" y="150" width="64" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Reviews"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0u-sm-f20">
+                                <rect key="frame" x="279" y="150" width="80" height="30"/>
+                                <state key="normal" title="Add Review"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v0u-sm-f20" firstAttribute="top" secondItem="YEn-6u-fLm" secondAttribute="bottom" constant="8" id="3II-mo-3QZ"/>
+                            <constraint firstItem="ZTa-Ej-WA4" firstAttribute="top" secondItem="bAJ-VX-7eF" secondAttribute="bottom" constant="20" id="6Gi-uV-Jl3"/>
+                            <constraint firstItem="bAJ-VX-7eF" firstAttribute="top" secondItem="npB-9n-aOM" secondAttribute="top" id="ACr-ji-IIC"/>
+                            <constraint firstItem="bAJ-VX-7eF" firstAttribute="leading" secondItem="ssK-Kc-Ssz" secondAttribute="leading" id="Dvb-cJ-GPb"/>
+                            <constraint firstItem="ssK-Kc-Ssz" firstAttribute="trailing" secondItem="hqs-zT-JU9" secondAttribute="trailing" constant="16" id="QNB-7I-0u7"/>
+                            <constraint firstItem="ssK-Kc-Ssz" firstAttribute="trailing" secondItem="ZTa-Ej-WA4" secondAttribute="trailing" constant="16" id="SCJ-gM-3th"/>
+                            <constraint firstItem="bAJ-VX-7eF" firstAttribute="trailing" secondItem="ssK-Kc-Ssz" secondAttribute="trailing" id="Svj-Py-nZG"/>
+                            <constraint firstItem="ssK-Kc-Ssz" firstAttribute="trailing" secondItem="YEn-6u-fLm" secondAttribute="trailing" constant="16" id="YOf-gu-HZd"/>
+                            <constraint firstItem="THt-KP-o2m" firstAttribute="leading" secondItem="YEn-6u-fLm" secondAttribute="leading" id="bLh-T8-7HH"/>
+                            <constraint firstItem="THt-KP-o2m" firstAttribute="top" secondItem="YEn-6u-fLm" secondAttribute="bottom" constant="8" id="dcy-is-Adn"/>
+                            <constraint firstItem="hqs-zT-JU9" firstAttribute="top" secondItem="THt-KP-o2m" secondAttribute="bottom" constant="8" id="h56-cL-SvA"/>
+                            <constraint firstItem="ZTa-Ej-WA4" firstAttribute="leading" secondItem="ssK-Kc-Ssz" secondAttribute="leading" constant="16" id="hyA-dY-SdX"/>
+                            <constraint firstItem="v0u-sm-f20" firstAttribute="trailing" secondItem="YEn-6u-fLm" secondAttribute="trailing" id="jFd-um-Jet"/>
+                            <constraint firstItem="hqs-zT-JU9" firstAttribute="leading" secondItem="ssK-Kc-Ssz" secondAttribute="leading" constant="16" id="kwM-dW-9FE"/>
+                            <constraint firstItem="ssK-Kc-Ssz" firstAttribute="bottom" secondItem="hqs-zT-JU9" secondAttribute="bottom" constant="20" id="lYN-nB-5XI"/>
+                            <constraint firstItem="YEn-6u-fLm" firstAttribute="top" secondItem="ZTa-Ej-WA4" secondAttribute="bottom" constant="15" id="lZ0-M9-o94"/>
+                            <constraint firstItem="YEn-6u-fLm" firstAttribute="leading" secondItem="ssK-Kc-Ssz" secondAttribute="leading" constant="16" id="zA3-QR-TQo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssK-Kc-Ssz"/>
+                    </view>
+                    <connections>
+                        <outlet property="avgCostLabel" destination="YEn-6u-fLm" id="FfQ-M7-Tb1"/>
+                        <outlet property="foodTypeLabel" destination="ZTa-Ej-WA4" id="ECI-Ap-ap3"/>
+                        <outlet property="mapView" destination="hqs-zT-JU9" id="gOQ-Kw-KcW"/>
+                        <outlet property="nameLabel" destination="wRE-jU-Jp0" id="JNB-Oo-6Y7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srd-xk-tRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2061.5999999999999" y="-572.56371814092961"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="idb-WF-OMh">

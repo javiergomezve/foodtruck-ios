@@ -40,6 +40,15 @@ class MainVC: UIViewController {
         loginVC?.modalPresentationStyle = UIModalPresentationStyle.formSheet
         self.present(loginVC!, animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailsFoodTruckVC" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationVC = segue.destination as! DetailsFoodTruckVC
+                destinationVC.selectedFoodTruck = self.dataService.foodTrucks[indexPath.row]
+            }
+        }
+    }
 }
 
 extension MainVC: DataServiceDelegate {
