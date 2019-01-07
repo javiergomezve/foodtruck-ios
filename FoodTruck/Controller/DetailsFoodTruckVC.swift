@@ -18,6 +18,8 @@ class DetailsFoodTruckVC: UIViewController {
     
     var selectedFoodTruck: FoodTruck?
     var logInVC: LogInVC?
+    
+    let SHOW_REVIEWS_VC = "showReviewsVC"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +36,25 @@ class DetailsFoodTruckVC: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func reviewsButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: SHOW_REVIEWS_VC, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SHOW_REVIEWS_VC {
+            let destinationVC = segue.destination as? ReviewsVC
+            destinationVC?.selectedFoodTruck = selectedFoodTruck
+        }
+    }
+    
     func centerMapOnLocation(_ location: CLLocation) {
         let coordinatesRegion = MKCoordinateRegion(center: selectedFoodTruck!.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
         mapView.setRegion(coordinatesRegion, animated: true)
+    }
+    
+    func showLoginVC() {
+        logInVC = LogInVC()
+        logInVC?.modalPresentationStyle = UIModalPresentationStyle.formSheet
+        self.present(logInVC!, animated: true, completion: nil)
     }
 }
