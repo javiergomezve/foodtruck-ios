@@ -20,6 +20,7 @@ class DetailsFoodTruckVC: UIViewController {
     var logInVC: LogInVC?
     
     let SHOW_REVIEWS_VC = "showReviewsVC"
+    let ADD_REVIEWS_VC = "addReviewsVC"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +41,20 @@ class DetailsFoodTruckVC: UIViewController {
         performSegue(withIdentifier: SHOW_REVIEWS_VC, sender: self)
     }
     
+    @IBAction func addReviewButtonTapped(_ sender: Any) {
+        if AuthService.instance.isAuthenticated == true {
+            performSegue(withIdentifier: ADD_REVIEWS_VC, sender: self)
+        } else {
+            showLoginVC()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SHOW_REVIEWS_VC {
             let destinationVC = segue.destination as? ReviewsVC
+            destinationVC?.selectedFoodTruck = selectedFoodTruck
+        } else if segue.identifier == ADD_REVIEWS_VC {
+            let destinationVC = segue.destination as? AddReviewVC
             destinationVC?.selectedFoodTruck = selectedFoodTruck
         }
     }

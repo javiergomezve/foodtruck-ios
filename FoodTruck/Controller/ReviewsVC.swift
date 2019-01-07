@@ -33,9 +33,7 @@ class ReviewsVC: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 140.0
     }
-    
-    
-    
+
     @IBAction func backButtonTapped(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
     }

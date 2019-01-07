@@ -280,6 +280,113 @@
             </objects>
             <point key="canvasLocation" x="1206" y="159"/>
         </scene>
+        <!--Add ReviewVC-->
+        <scene sceneID="nK3-O2-0Aq">
+            <objects>
+                <viewController id="edB-9f-gKx" customClass="AddReviewVC" customModule="FoodTruck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lzU-Dr-PM6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSp-G5-2EQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiL-tN-MJn">
+                                        <rect key="frame" x="15" y="32" width="12" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="9Zl-Ic-PXV"/>
+                                            <constraint firstAttribute="width" constant="12" id="JlV-IS-e2W"/>
+                                        </constraints>
+                                        <state key="normal" image="WhiteBackArrow"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="edB-9f-gKx" eventType="touchUpInside" id="mEc-xC-aVL"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nko-rL-rNd">
+                                        <rect key="frame" x="110.5" y="33" width="154" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.48627450979999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GiL-tN-MJn" secondAttribute="bottom" constant="8" id="DZS-Af-BuU"/>
+                                    <constraint firstAttribute="height" constant="65" id="GJE-0l-2tR"/>
+                                    <constraint firstAttribute="width" constant="375" id="IWn-vj-4x0"/>
+                                    <constraint firstItem="GiL-tN-MJn" firstAttribute="leading" secondItem="BSp-G5-2EQ" secondAttribute="leading" constant="15" id="KHW-uK-JiA"/>
+                                    <constraint firstItem="nko-rL-rNd" firstAttribute="centerX" secondItem="BSp-G5-2EQ" secondAttribute="centerX" id="rHo-3p-TjN"/>
+                                    <constraint firstAttribute="bottom" secondItem="nko-rL-rNd" secondAttribute="bottom" constant="8" id="yHb-VN-TMx"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qxc-7R-Nv2">
+                                <rect key="frame" x="42.5" y="85" width="290" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="itH-DC-T0S"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ybx-f5-0ul">
+                                <rect key="frame" x="42.5" y="135" width="290" height="226"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.10273972602739725" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="AJ1-gM-EKg"/>
+                                    <constraint firstAttribute="height" constant="226" id="VSh-fx-pjs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8s-92-OqA">
+                                <rect key="frame" x="42.5" y="381" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ah5-PM-zIb"/>
+                                    <constraint firstAttribute="width" constant="30" id="TR1-Eo-aII"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="edB-9f-gKx" eventType="touchUpInside" id="Mxe-Y1-WGK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COK-ud-hdZ">
+                                <rect key="frame" x="284.5" y="381" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="Hko-qJ-eYX"/>
+                                    <constraint firstAttribute="height" constant="30" id="hTU-Vb-UnE"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="edB-9f-gKx" eventType="touchUpInside" id="gUT-m3-1at"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qxc-7R-Nv2" firstAttribute="centerX" secondItem="lzU-Dr-PM6" secondAttribute="centerX" id="2Du-EF-NIH"/>
+                            <constraint firstItem="ybx-f5-0ul" firstAttribute="top" secondItem="Qxc-7R-Nv2" secondAttribute="bottom" constant="20" id="3gQ-oU-sQN"/>
+                            <constraint firstItem="COK-ud-hdZ" firstAttribute="top" secondItem="ybx-f5-0ul" secondAttribute="bottom" constant="20" id="4hq-8J-xKV"/>
+                            <constraint firstItem="I8s-92-OqA" firstAttribute="leading" secondItem="ybx-f5-0ul" secondAttribute="leading" id="9Z7-pF-euI"/>
+                            <constraint firstItem="BSp-G5-2EQ" firstAttribute="trailing" secondItem="cC1-36-93U" secondAttribute="trailing" id="TcN-Zy-09y"/>
+                            <constraint firstItem="BSp-G5-2EQ" firstAttribute="top" secondItem="lzU-Dr-PM6" secondAttribute="top" id="dlf-XK-OlX"/>
+                            <constraint firstItem="BSp-G5-2EQ" firstAttribute="leading" secondItem="cC1-36-93U" secondAttribute="leading" id="jFb-N8-Krj"/>
+                            <constraint firstItem="ybx-f5-0ul" firstAttribute="centerX" secondItem="lzU-Dr-PM6" secondAttribute="centerX" id="pXz-Xg-DnJ"/>
+                            <constraint firstItem="Qxc-7R-Nv2" firstAttribute="top" secondItem="BSp-G5-2EQ" secondAttribute="bottom" constant="20" id="vHp-i3-C2o"/>
+                            <constraint firstItem="I8s-92-OqA" firstAttribute="top" secondItem="ybx-f5-0ul" secondAttribute="bottom" constant="20" id="vYi-OV-uua"/>
+                            <constraint firstItem="COK-ud-hdZ" firstAttribute="trailing" secondItem="ybx-f5-0ul" secondAttribute="trailing" id="x8o-Du-1Ne"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cC1-36-93U"/>
+                    </view>
+                    <connections>
+                        <outlet property="headerLabel" destination="nko-rL-rNd" id="3aF-i6-1z2"/>
+                        <outlet property="reviewTextField" destination="ybx-f5-0ul" id="EtV-rm-hxN"/>
+                        <outlet property="titleTextField" destination="Qxc-7R-Nv2" id="sSb-cD-sKu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C9z-pQ-ksf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2085.5999999999999" y="158.77061469265368"/>
+        </scene>
         <!--Details Food TruckVC-->
         <scene sceneID="kqc-EN-NSL">
             <objects>
@@ -355,6 +462,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0u-sm-f20">
                                 <rect key="frame" x="279" y="150" width="80" height="30"/>
                                 <state key="normal" title="Add Review"/>
+                                <connections>
+                                    <action selector="addReviewButtonTapped:" destination="MKf-aG-3gq" eventType="touchUpInside" id="Eu6-Zf-hwN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -385,6 +495,7 @@
                         <outlet property="mapView" destination="hqs-zT-JU9" id="gOQ-Kw-KcW"/>
                         <outlet property="nameLabel" destination="wRE-jU-Jp0" id="JNB-Oo-6Y7"/>
                         <segue destination="tF8-kb-dd6" kind="show" identifier="showReviewsVC" id="zGt-c0-JCx"/>
+                        <segue destination="edB-9f-gKx" kind="show" identifier="addReviewsVC" id="0xP-Ru-wfg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srd-xk-tRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
