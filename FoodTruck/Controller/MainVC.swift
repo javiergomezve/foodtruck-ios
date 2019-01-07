@@ -14,6 +14,8 @@ class MainVC: UIViewController {
     
     var dataService = DataService.instance
     var authService = AuthService.instance
+    
+    var loginVC: LogInVC?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,20 @@ class MainVC: UIViewController {
         
         dataService.delegate = self
         dataService.getAllFoodTrucks()
+    }
+    
+    @IBAction func addButonTapped(_ sender: Any) {
+        if AuthService.instance.isAuthenticated == true {
+            performSegue(withIdentifier: "showAddTruckVC", sender: self)
+        } else {
+            showLogInVC()
+        }
+    }
+    
+    func showLogInVC() {
+        loginVC = LogInVC()
+        loginVC?.modalPresentationStyle = UIModalPresentationStyle.formSheet
+        self.present(loginVC!, animated: true, completion: nil)
     }
 }
 
